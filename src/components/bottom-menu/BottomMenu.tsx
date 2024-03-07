@@ -10,6 +10,7 @@ import { PagesEnum, RootStackParams } from '../../../App';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import{ NativeStackNavi } from '@react-navigation/native-stack';
 
+// TODO УСТАРЕВШИЙ
 const BottomMenu = () => {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParams>>();
 

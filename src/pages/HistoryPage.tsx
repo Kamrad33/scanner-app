@@ -1,8 +1,6 @@
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
-import { View, Text, Button, StyleSheet, ScrollView } from 'react-native';
-import { ProfileStackParams } from './ProfileStackPage';
-import { useIsFocused, useNavigation } from '@react-navigation/native';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import { useIsFocused } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import HistoryItem from '../components/history/HistoryItem';
 
@@ -17,16 +15,6 @@ const HistoryPage = () => {
     const [history, setHistory] = useState<HistoryProps[]>([]);
     const [updated, setUpdated] = useState<number>(Date.now());
     const isFocused = useIsFocused();
-
-    const storeData = async (value: any) => {
-        try {
-            await AsyncStorage.setItem('history', '');
-            // const x = await AsyncStorage.getItem('my-key');
-            setHistory([]);
-            } catch (e) {
-            // saving error
-        }
-    };
 
     useEffect(() => {
         (async () => {
@@ -59,7 +47,6 @@ const HistoryPage = () => {
                     ))}
 
                 </View>
-                {/* <Button title='' onPress={storeData}/> */}
             </ScrollView>
         </View>
     );

@@ -1,9 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { BarcodeScanningResult, Camera, CameraView, useCameraPermissions } from 'expo-camera/next';
+import { Camera, CameraView, } from 'expo-camera/next';
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Text, Button, TouchableOpacity, Dimensions } from 'react-native';
-import { RootStackParams } from '../../App';
+import { View, StyleSheet, Text, Dimensions } from 'react-native';
 import { ScannerStackParams } from './ScannerStackPage';
 import Svg, { Path } from 'react-native-svg';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -33,7 +32,6 @@ const ScannerPage = () => {
             && data.boundingBox.origin.y <= (screen.width / 4 + 50)
         ) {
             setIsScanned(true);
-            // alert(`Bar code with type ${e.type} and data ${e.data} has been scanned!`);
             setTimeout(() => {
                 setIsScanned(false);
             }, 5000);
@@ -45,16 +43,6 @@ const ScannerPage = () => {
                 target: Number(data.target)
             });
         }
-        
-        // setIsScanned(true);
-        // alert(`Bar code with type ${e.type} and data ${e.data} has been scanned!`);
-        // console.log('KEK');
-        // setTimeout(() => {
-        //     setIsScanned(false);
-        // }, 1500)
-        // setIsScanned(false);
-        // TODO переделать не REDUX
-        // openProduct();
     };
 
     interface OpenProductProps {

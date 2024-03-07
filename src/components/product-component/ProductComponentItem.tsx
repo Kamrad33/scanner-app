@@ -98,8 +98,6 @@ const ProductComponentItem = ({
 
     useEffect(() => {
         checkIsInFilter(id);
-        console.log(danger);
-        
     }, [isInFilter]);
 
     return(

@@ -19,9 +19,6 @@ const SearchStackPage = () => {
     return (
         <SearchStack.Navigator
             initialRouteName='SearchPage'
-            screenOptions={{
-                // headerShown: false,
-            }}
         >
             <SearchStack.Screen
                 name='SearchPage'
@@ -40,8 +37,5 @@ const SearchStackPage = () => {
         </SearchStack.Navigator>
     )
 };
-
-const styles = StyleSheet.create({
-});
 
 export default SearchStackPage;

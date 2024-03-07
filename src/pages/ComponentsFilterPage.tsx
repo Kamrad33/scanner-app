@@ -12,7 +12,6 @@ const ComponentsFilterPage = () => {
     const handleFilter = (nameFilter: string) => {
         const filtred = components?.filter(({name}) => name.trim().toLowerCase().includes(nameFilter.trim().toLowerCase()));
 
-        // console.log(filtred);
         setFiltredComponents(filtred);
     }
 

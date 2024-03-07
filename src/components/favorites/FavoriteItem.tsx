@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { ScannerStackParams } from '../../pages/ScannerStackPage';
 import { ProfileStackParams } from '../../pages/ProfileStackPage';
-import { Product, loadAllProducts, loadSelectedProducts } from '../../helpers/helpers';
+import { Product, loadSelectedProducts } from '../../helpers/helpers';
 import CrossSvg from '../icons/CrossSvg';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -44,8 +43,6 @@ const FavoriteItem = ({
             type,
             code,
         });
-
-        console.log('open');
     };
 
     const deleteItem = async (id: string) => {

@@ -19,9 +19,6 @@ const ScannerStackPage = () => {
     return (
         <ScannerStack.Navigator
             initialRouteName='ScannerPage'
-            screenOptions={{
-                // headerShown: false,
-            }}
         >
             <ScannerStack.Screen
                 name='ScannerPage'
